@@ -78,7 +78,13 @@
 					<compilerPlugins>
 						<plugin>jpa</plugin>
 						<plugin>spring</plugin>
+						<plugin>all-open</plugin>
 					</compilerPlugins>
+					<pluginOptions>
+						<option>all-open:annotation=javax.persistence.Entity</option>
+						<option>all-open:annotation=javax.persistence.Embeddable</option>
+						<option>all-open:annotation=javax.persistence.MappedSuperclass</option>
+					</pluginOptions>
 					<args>
 						<arg>-Xjsr305=strict</arg>
 					</args>
