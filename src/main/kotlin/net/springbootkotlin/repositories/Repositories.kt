@@ -1,17 +1,17 @@
 package net.springbootkotlin.repositories
 
-import net.springbootkotlin.model.Article
-import net.springbootkotlin.model.User
+import net.springbootkotlin.model.Articles
+import net.springbootkotlin.model.Users
 import org.springframework.data.repository.CrudRepository
 
-interface ArticleRepository : CrudRepository<Article, Long> {
+interface ArticleRepository : CrudRepository<Articles, Long> {
 
-    fun findBySlug(slug: String): Article?
+    fun findBySlug(slug: String): Articles?
 
-    fun findAllByOrderByAddedAtDesc(): Iterable<Article>
+    fun findAllByOrderByAddedAtDesc(): Iterable<Articles>
 }
 
-interface UserRepository : CrudRepository<User, Long> {
+interface UserRepository : CrudRepository<Users, Long> {
 
-    fun findByLogin(login: String): User?
+    fun findByLogin(login: String): Users?
 }
