@@ -8,7 +8,7 @@ import javax.persistence.Id
 import javax.persistence.ManyToOne
 
 /**
- * There is a reserver keyword USER in newer versions of H2 database.
+ * There is a reserved keyword USER in newer versions of H2 database.
  * hence changing the article name to plurals
  */
 

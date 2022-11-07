@@ -10,12 +10,13 @@ import java.util.*
  * Here we are going to add a format() function to the existing LocalDateTime type in order to generate text with the English date format.
  */
 
+// Every LocalDateTime will be format to this
 fun LocalDateTime.format(): String = this.format(englishDateFormatter)
 
 private val daysLookup = (1..31).associate { it.toLong() to getOrdinal(it) }
 
 private val englishDateFormatter = DateTimeFormatterBuilder()
-    .appendPattern("yyyy-MM-DD")
+    .appendPattern("yyyy-MM-dd")
     .appendLiteral(" ")
     .appendText(ChronoField.DAY_OF_MONTH, daysLookup)
     .appendLiteral(" ")
